@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ngbpa(_)nq)vp6s3p4coj^7ucd$e!1fgsi(_4c8yi4v3$gz=r*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["mentalhealthyw.com"]
+ALLOWED_HOSTS = ["acesur74101.pythonanywhere.com"]
 
 
 # Application definition

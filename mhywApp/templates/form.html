@@ -1,0 +1,39 @@
+{% block form %}
+<form class="iletisimform mb-5 mt-5 row" action="https://formsubmit.co/a.ergun25yw@gmail.com" method="POST">
+    {% block formtitle %}
+        <h2 class="text-center">Bizimle İletişime Geçmek İçin Formu Doldurunuz.</h2>
+    {% endblock formtitle %}
+    <div class="col-12   m-auto mt-3">
+        <label >Ad ve Soyadınız:</label> <br>
+        <input class="mx-2 mt-1"  type="text" name="name" placeholder="Ad ve Soyad" required> <br>
+    </div>
+    <div class="col-12 m-auto mt-3">
+        <label>E-Posta Adresi</label> <br>
+        <input class="mx-2 ms-3 mt-1" type="email" name="email"placeholder="E-posta Adresi"  required> <br>
+    </div>
+    <div class=" col-12  m-auto mt-3">
+        <label>Telefon Numarası:</label>  <br>
+        <input class="mx-2  mt-1" type="text" name="gsm" placeholder="Telefon Numaranız"> <br>
+    </div>
+    {% block form1 %}
+    <div class="col-md-6 col-sm-8 col-12 m-auto row d-flex justify-content-center mt-3">
+        <label class="col-12">İletişim geçmek istediğiniz konuyu kısaca özetleyiniz:</label> <br>
+        <textarea class="m-auto" name="ozet" placeholder="konu özeti" id="" cols="35" rows="15"></textarea>
+    </div>
+    {% endblock form1 %}
+    
+   
+    <input type="hidden" name="_cc" value="abdulkadir.cesuroglu@gmail.com">
+    <input type="hidden" name="_captcha" value="false">
+ 
+
+
+    <input type="hidden" name="_autoresponse" value="bizimle iletisim kurdugunuz icin tesekkur ederiz">
+
+    <input type="hidden" name="_next" value="http://127.0.0.1:5500/"><br>
+    <div class="col-12 d-flex justify-content-center mt-5">
+        <button  type="submit">Send</button>
+    </div>
+</form>
+    {% endblock form %}
+   

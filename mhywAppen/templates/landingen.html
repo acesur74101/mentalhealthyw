@@ -1,0 +1,56 @@
+{% extends "landing.html" %}
+{%load static%}
+
+{% block navbarnav %}
+  {% include "navbaren.html" %}
+  {% endblock navbarnav %}
+  
+
+  {% block icerik %}
+  <div class="col-9  m-auto d-flex justify-content-center">
+                          
+    <img class=" m-auto mt-5 fingers" src="{% static '/media/logo.png' %}" alt="logo">
+ 
+</div>
+<div class="col-md-9 col-9 m-auto mt-2">
+    
+    <p class="m-auto text-center f-1 fst-italic">
+        Mental Health Youth Work(er)s web sayfası, Sivil Toplum Destekleme Derneği – SİTODED tarafından uygulanan “Türkiye’de Gençlerin Mental İyi Oluş Hali” araştırma projesinin çıktısıdır. Proje 3 aşamalı uygulanmaktadır.
+    </p>
+</div>
+
+<div class="col-9 m-auto mt-3 mb-2">
+    <h2 class="text-center fs-1 mt-3">
+        Events
+    </h2>
+</div>
+<br>
+{% for duyur in duyurular %}
+    <div class="row m-auto">
+        <div class="col-md-3 col-sm-6 col-12 m-auto p-3 ">
+            <img class="duyuruResim m-auto" src="{{duyur.resim.url}}" alt="Duyuru Resmi">
+        </div>
+        <div class="col-md-9 col-sm-6 col-12 m-auto">
+            <h2 class="m-auto text-center m-auto">
+                {{duyur.basliken}}
+            </h2>
+            <p class="text-center mt-2 m-auto">{{duyur.manseten}} <br> <a class="text-center m-auto" href="{% url 'duyuruen' duyur.basliken%}">Click to go to the event's page</a></p>
+            <br>
+            
+        </div>
+    </div>
+{% endfor %}
+  {% endblock icerik %}
+{% block menuf %}
+<ul class="mt-2 text-center">
+    <li class="pb-2"><a href="{% url 'landingen' %}">Main Page</a></li>
+    <li class="pb-2"><a href="{% url 'hakkimizdaen' %}">About Us</a></li>
+    <li class="pb-2"><a href="{% url 'iletisimen' %}">Contact</a></li>
+  </ul>
+{% endblock menuf %}
+
+{% block sosyalmedya %}
+        
+        
+        <h3 class="text-center">Social Media Accounts</h3>
+{% endblock sosyalmedya %}

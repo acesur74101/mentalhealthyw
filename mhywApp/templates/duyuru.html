@@ -1,0 +1,39 @@
+{% extends "landing.html" %}
+{% load static %}
+{% block title %}
+<title>Duyuru Detay Sayfası</title>
+{% endblock title %}
+
+{% block icerik%}
+{% for duyuru in duyurular %}
+
+<div class="container">
+    <div class="row">
+        <h1 class="col-12 text-center mt-5 mb-5">
+            {{duyuru.baslik}}
+        </h1>
+       <div class=" duyurur col-md-6 col-12 m-auto mb-5">
+        <img class="duyuruResim" src="{{duyuru.resim.url}}" height="200px" alt="">
+       </div>
+       <div class="col-12 ">
+        <p class="text-center p-5 mt-2">
+            {{duyuru.kisaAciklama}}
+        </p>
+       </div>
+       <div class="col-12 text-center p-3 mt-2 mb-2">
+        <p class="text-center p=">
+           {{duyuru.uzunAciklama}}
+        </p>
+        <p class="text-center">
+            Etkinlik baslangic tarihi :{{duyuru.baslangic}}
+        </p>
+
+        <p class="text-center">
+            Etkinlik bitis tarihi: {{duyuru.bitis}}
+        </p>
+       </div>
+       </div>
+</div>
+
+{% endfor %}
+{% endblock icerik%}
